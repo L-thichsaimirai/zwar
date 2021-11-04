@@ -1,93 +1,105 @@
 {
     "items": [{
-        "name": "Cần Câu Thủ Công",
-        "price": 500,
+        "name": "Cần Câu [+1]",
+        "price": 500.00,
         "time": 120,
         "duribility": 10
     },
      {
-        "name": "Cần Câu E N V",
-        "price": 100,
+        "name": "Cần Câu [+2]",
+        "price": 1000.00,
         "time": 0,
         "duribility": 10
     },
       {
-        "name": "Cần Câu",
-        "price": 1000,
+        "name": "Cần Câu [+3]",
+        "price": 2000.00,
         "time": 60,
         "duribility": 20
     },
       {
-        "name": "Cần Câu Nghiệp Dư",
-        "price": 2000,
+        "name": "Cần Câu [+4]",
+        "price": 3000.00,
         "time": 40,
+        "duribility": 20
+    },
+      {
+        "name": "Cần Câu [+5]",
+        "price": 4000.00,
+        "time": 35,
         "duribility": 40
     },
       {
-        "name": "Cần Câu Nâng Cấp",
-        "price": 3000,
-        "time": 35,
-        "duribility": 50
-    },
-      {
         "name": "Cần Câu Vip",
-        "price": 4000,
+        "price": 5000.00,
         "time": 20,
-        "duribility": 60
+        "duribility": 40
     },
       {
         "name": "Cần Câu Master",
-        "price": 5000,
+        "price": 600.00,
         "time": 10,
-        "duribility": 70
+        "duribility": 60
     },
     {
         "name": "Cần Câu Chuyên Nghiệp",
-        "price": 6000,
+        "price": 700.00,
         "time": 6,
-        "duribility": 20
+        "duribility": 60
     },
     {
-        "name": "Cần Câu Thành Quả",
-        "price": 7000,
+        "name": "Cần Câu Chăm Chỉ [+1]",
+        "price": 9000.00,
         "time": 3,
-        "duribility": 1100
+        "duribility": 100
     },
       {
-        "name": "Cần Câu MAX",
-        "price": 8000,
+        "name": "Cần Câu Chăm Chỉ [+2]",
+        "price": 15000.00,
         "time": 1,
-        "duribility": 2000
+        "duribility": 500
     },
       {
-        "name": "Cần Câu GOD",
-        "price": 9000,
+        "name": "Cần Câu Chăm Chỉ [+3]",
+        "price": 30000.00,
         "time": 0,
-        "duribility": 99999
+        "duribility": 600
     },  
       {
-        "name": "Cần Câu CMAX",
-        "price": 100000000000303030,
+        "name": "Cần Câu Chăm Chỉ [+4]",
+        "price": 50000.00,
         "time": 0,
-        "duribility": 1000000000000000000
+        "duribility": 800
     },     
       {
-        "name": "Cần Câu Staff",
-        "price": 10000,
+        "name": "Cần Câu Staff [+1]",
+        "price": 10000.00,
         "time": 0,
-        "duribility": 999999
+        "duribility": 900
     },
       {
-        "name": "Cần Câu AD",
+        "name": "Cần Câu Admin [+2]",
         "price": 100000.00,
         "time": 0,
-        "duribility": 99999
+        "duribility": 1300
     },
     {
-        "name": "Cần Câu Event",
-        "price": 1000000000,
+        "name": "Cần Câu Event [JFENVNT]",
+        "price": 1,
         "time": 0,
-        "duribility": 100
+        "duribility": 50
+    },
+    {
+      "name": "Cần Câu Donate [Lucky +1]",
+      "price": "[20 Xu]",
+      "time": 0,
+      "duribility": 10000
+    },
+    {
+      "name": "Cần Câu Enchant [Lucky,Fast Fishing +1]",
+      "price": "[50 Xu]",
+      "time": 0,
+      "duribility": 10000
     }
-    ]
+  ]
 }
