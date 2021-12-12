@@ -173,7 +173,7 @@
     {
         "name": "Cá Fe [26]",
         "catch": "Sắt | Proton : 26 | NTK : 56 | HT : II ,III",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -182,7 +182,7 @@
     {
         "name": "Cá Silic [14]",
         "catch": "Si | Proton : 14 | NTK : 28 | HT : IV",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -191,7 +191,7 @@
     {
         "name": "Cá Kali [19]",
         "catch": "K | Proton : 19 | NTK : 39 | HT : I",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -200,7 +200,7 @@
     {
         "name": "Cá Hidrô [1]",
         "catch": "H | Proton : 1 | NTK : 1 | HT : I",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -209,7 +209,7 @@
     {
         "name": "Cá Heli [2]",
         "catch": "He | Proton : 2 | NTK : 4 | HT : K Có",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -218,7 +218,7 @@
     {
         "name": "Cá Liti [3]",
         "catch": "Li | Proton : 3 | NTK : 7 | HT : I",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -227,7 +227,7 @@
     {
         "name": "Cá Beri [4]",
         "catch": "Be | Proton : 4 | NTK : 9 | HT : II",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -236,7 +236,7 @@
     {
         "name": "Cá Cacbon [6]",
         "catch": "C | Proton : 6 | NTK : 12 | HT : IV,II",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -245,7 +245,7 @@
     {
         "name": "Cá Bari [56]",
         "catch": "Ba | Proton : 56 | NTK : 137 | HT : II",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -254,7 +254,7 @@
     {
         "name": "Cá Neon [10]",
         "catch": "Ne | Proton : 10 | NTK : 20 | HT : K Có",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -263,7 +263,7 @@
     {
         "name": "Cá Bo [5]",
         "catch": "B | Proton : 5 | NTK : 11 | HT : III",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -272,7 +272,7 @@
     {
         "name": "Cá Nitơ [7]",
         "catch": "N | Proton : 7 | NTK : 14 | HT : III,II,IV",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -281,7 +281,7 @@
     {
         "name": "Cá Nhôm [13]",
         "catch": "Al | Proton : 13 | NTK : 27 | HT : III",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -290,7 +290,7 @@
     {
         "name": "Cá Kẽm [30]",
         "catch": "Zn | Proton : 30 | NTK : 65 | HT : II",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -299,7 +299,7 @@
     {
         "name": "Cá Bạc [47]",
         "catch": "Ag | Proton : 47 | NTK : 108 | HT : I",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -308,7 +308,7 @@
     {
         "name": "Cá Photpho [15]",
         "catch": "P | Proton : 15 | NTK : 31 | HT : III,V",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -317,7 +317,7 @@
     {
         "name": "Cá Đồng [29]",
         "catch": "Cu | Proton : 29 | NTK : 64 | HT : I,II",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -326,7 +326,7 @@
     {
         "name": "Cá Natri [11]",
         "catch": "Na | Proton : 11 | NTK : 23 | HT : I",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -335,7 +335,7 @@
     {
         "name": "Cá Agon [18]",
         "catch": "Ar | Proton : 18 | NTK : 39,9 | HT : K Có",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -344,7 +344,7 @@
     {
         "name": "Cá Mangan [25]",
         "catch": "Mn | Proton : 25 | NTK : 55 | HT : II,IV,VII...",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -353,7 +353,7 @@
     {
         "name": "Cá Clo [17]",
         "catch": "Cl | Proton : 17 | NTK : 35,5 | HT : I,...",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -362,7 +362,7 @@
     {
         "name": "Cá Magiê [12]",
         "catch": "Mg | Proton : 12 | NTK : 24 | HT : II",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -371,7 +371,7 @@
     {
         "name": "Cá Flo [9]",
         "catch": "F | Proton : 9 | NTK : 19 | HT : I",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -380,7 +380,7 @@
     {
         "name": "Cá Brom [35]",
         "catch": "Br | Proton : 35 | NTK : 80 | HT : I...",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -389,7 +389,7 @@
     {
         "name": "Cá Oxi [8]",
         "catch": "O | Proton : 8 | NTK : 16 | HT : II",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -398,7 +398,7 @@
     {
         "name": "Cá Chì [82]",
         "catch": "Pb | Proton : 82 | NTK : 207 | HT : II,IV",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -407,7 +407,7 @@
     {
         "name": "Cá Lưu Huỳnh [16]",
         "catch": "S | Proton : 16 | NTK : 32 | HT : II,IV,VI",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -416,7 +416,7 @@
     {
         "name": "Cá Canxi [20]",
         "catch": "Ca | Proton : 20 | NTK : 40 | HT : II",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -425,7 +425,7 @@
     {
         "name": "Cá Crom [24]",
         "catch": "Cr | Proton : 24 | NTK : 52 | HT : II,III,...",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
@@ -434,7 +434,7 @@
     {
         "name": "Cá Thủy Ngân [80]",
         "catch": "Hg | Proton : 80 | NTK : 201 | HT : I,II",
-        "rarity": "Bình Thường",
+        "rarity": "Nguyên Tố",
         "price": 300,
         "size": [29, 31],
         "time": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
