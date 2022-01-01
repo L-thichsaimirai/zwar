@@ -6,12 +6,14 @@ module.exports.config = {
     usages: "Zwar [register/shop/upgrade/info/prison/status/sell]",
     commandCategory: "game",
     cooldowns: 0,
-    dependencies: ["fs-extra","axios"]
+    dependencies: {
+         "fs-extra": "",
+         "axios": ""
 };
 
 module.exports.onLoad = async () => {
-    const fs = require("fs-extra");
-    const axios = require("axios");
+    const fs = require ("fs-extra");
+    const axios = require ("axios");
 
     const dirMaterial = __dirname + `/cache/zwar/`;
 
@@ -59,13 +61,13 @@ module.exports.handleReaction = async ({ api, event, handleReaction, Currencies 
     }
     catch (e) {
         console.log(e);
-        return api.sendMessage("[Hệ Thống Đánh Cá] Thằng Nhân Viên Nó Làm Chết Hết Cá Rồi , Hãy báo cáo với admin => '/callad'", event.threadID, event.messageID);
+        return api.sendMessage("[Chiến Trường] zombie đã tiêu diệt hết người chơi", event.threadID, event.messageID);
     }
 }
 
 module.exports.handleReply = async function({ api, event, client, handleReply, Currencies }) {
     if (handleReply.author != event.senderID) return;
-    const { readFileSync } = require("fs-extra");
+    const { readFileSync } = require ("fs-extra");
     const emptyItem = {
         name: "Empty",
         size: 0.0,
@@ -87,7 +89,7 @@ module.exports.handleReply = async function({ api, event, client, handleReply, C
                     }
             
                     return api.sendMessage(
-                        "[ ❖-❖-❖ ] [ = [ Shop Cần Câu Cá ] = ] [ ❖-❖-❖ ]" +
+                        "[ ❖-❖-❖ ] [ = [ Shop Weapon] = ] [ ❖-❖-❖ ]" +
                         "\n[ ❖-❖ ] Hãy Lựa Chọn Theo Cách Của Bạn [ ❖-❖ ]\n\n" +
                         entryList.join("\n") +
                         "\n[ ❖ ] => Hãy Trả Lời Tin Nhắn Bot Và Chọn Theo Số Thứ Tự <= [ ❖ ]"
@@ -113,11 +115,11 @@ module.exports.handleReply = async function({ api, event, client, handleReply, C
                     }
                     const money = userData["money"] += moneyAll;
                     await Currencies.setData(event.senderID,{ money, zwar });
-                    return api.sendMessage(`[ Hệ Thống Đánh Cá ] Tổng số tiền bạn bán được là: ${moneyAll} coins`, event.threadID, event.messageID);
+                    return api.sendMessage(`[ Chiến Trường ] Tổng số tiền bạn bán được là: ${moneyAll} coins`, event.threadID, event.messageID);
                 }
                 case "3": {
                     const userData = (await Currencies.getData(event.senderID)).zwar;
-                    return api.sendMessage(`[ = ] Shop Cá (Upgrade) [ = ]\n\n[!] Hiện tại bạn đang có ${userData.critters.length += 1} vị trí có thể chứa đồ trong kho đồ của bạn\n[ ❖ ] => Để Nâng Cấp Hãy Reply Tin Nhắn Và Ghi Số Slot <= [❖]`, event.threadID, (error, info) => {
+                    return api.sendMessage(`[ = ] Shop Weapon (Upgrade) [ = ]\n\n[!] Hiện tại bạn đang có ${userData.critters.length += 1} vị trí có thể chứa đồ trong kho đồ của bạn\n[ ❖ ] => Để Nâng Cấp Hãy Reply Tin Nhắn Và Ghi Số Slot <= [❖]`, event.threadID, (error, info) => {
                         client.handleReply.push({
                             name: this.config.name,
                             messageID: info.messageID,
@@ -136,10 +138,10 @@ module.exports.handleReply = async function({ api, event, client, handleReply, C
             try {
                 const choose = parseInt(event.body);
                 var userData = (await Currencies.getData(event.senderID));
-                if (isNaN(event.body)) return api.sendMessage("[Shop Hệ Thống Đánh Cá] Lựa chọn của bạn không phải là một con số!", event.threadID, event.messageID);
-                if (choose > dataItems.length || choose < dataItems.length) return api.sendMessage("[Shop Hệ Thống Đánh Cá] Lựa chọn của bạn vượt quá danh sách", event.threadID, event.messageID);
+                if (isNaN(event.body)) return api.sendMessage("[Chiến Trường] Lựa chọn của bạn không phải là một con số!", event.threadID, event.messageID);
+                if (choose > dataItems.length || choose < dataItems.length) return api.sendMessage("[Chiến trường] Lựa chọn của bạn vượt quá danh sách", event.threadID, event.messageID);
                 const itemUserChoose = dataItems.items[choose - 1];
-                if (userData.money < itemUserChoose.price) return api.sendMessage("[Shop Hệ Thống Đánh Cá] Bạn không đủ tiền để có thể mua cần câu mới", event.threadID, event.messageID);
+                if (userData.money < itemUserChoose.price) return api.sendMessage("[Chiến Trường] Bạn không đủ tiền để có thể súng mo", event.threadID, event.messageID);
                 userData["zwar"].weapon = itemUserChoose;
                 userData.money = userData.money - itemUserChoose.price;
                 await Currencies.setData(event.senderID, {money: userData.money, zwar: userData.zwar});
@@ -147,7 +149,7 @@ module.exports.handleReply = async function({ api, event, client, handleReply, C
             }
             catch (e) {
                 console.log(e);
-                return api.sendMessage("[Hệ Thống Đánh Cá] Hiện tại không thể mở shop vì đã xảy ra lỗi hệ thống, vui lòng thử lại sau hoặc đợi thông báo!", event.threadID, event.messageID); 
+                return api.sendMessage("[Chiến Trường] Hiện tại không thể mở shop vì đã xảy ra lỗi hệ thống, vui lòng thử lại sau hoặc đợi thông báo!", event.threadID, event.messageID); 
             }
         }
         //upgrade
@@ -155,11 +157,11 @@ module.exports.handleReply = async function({ api, event, client, handleReply, C
             try {
                 const choose = parseInt(event.body);
                 var userData = (await Currencies.getData(event.senderID));
-                if (isNaN(event.body)) return api.sendMessage("[Shop Hệ Thống Đánh Cá] Lựa chọn của bạn không phải là một con số!", event.threadID, event.messageID);
-                if (choose <= 0) return api.sendMessage("[Shop Hệ Thống Đánh Cá] Lựa chọn của bạn không phải là số âm!", event.threadID, event.messageID);
+                if (isNaN(event.body)) return api.sendMessage("[Chiến Trường] Lựa chọn của bạn không phải là một con số!", event.threadID, event.messageID);
+                if (choose <= 0) return api.sendMessage("[Chiến Trường] Lựa chọn của bạn không phải là số âm!", event.threadID, event.messageID);
                 const moneyOfUpgrade = choose * 2000;
-                if (userData.money < moneyOfUpgrade) return api.sendMessage(`[Shop Hệ Thống Đánh Cá] Bạn không đủ tiền để có thể mua thêm chỗ cho túi đồ, bạn còn thiếu khoảng ${moneyOfUpgrade - userData.money}`, event.threadID, event.messageID);
-                return api.sendMessage(`[Shop Hệ Thống Đánh Cá] Bạn đang cần mua ${choose} vị trí với giá ${moneyOfUpgrade} coins, nếu bạn đồng ý có thể reaction tin này!`, event.threadID, (error, info) => {
+                if (userData.money < moneyOfUpgrade) return api.sendMessage(`[Shop Weapon] Bạn không đủ tiền để có thể mua thêm chỗ cho túi đồ, bạn còn thiếu khoảng ${moneyOfUpgrade - userData.money}`, event.threadID, event.messageID);
+                return api.sendMessage(`[Shop Weapon] Bạn đang cần mua ${choose} vị trí với giá ${moneyOfUpgrade} coins, nếu bạn đồng ý có thể reaction tin này!`, event.threadID, (error, info) => {
                     client.handleReaction.push({
                         name: this.config.name,
                         messageID: info.messageID,
@@ -171,7 +173,7 @@ module.exports.handleReply = async function({ api, event, client, handleReply, C
             }
             catch (e) {
                 console.log(e);
-                return api.sendMessage("[Hệ Thống Đánh Cá] Hiện tại không thể câu cá vì đã xảy ra lỗi hệ thống, vui lòng thử lại sau hoặc đợi thông báo!, Code : 001", event.threadID, event.messageID);
+                return api.sendMessage("[Chiến Trường] Hiện tại không thể tham gia vì đã xảy ra lỗi hệ thống, vui lòng thử lại sau hoặc đợi thông báo!, Code : 001", event.threadID, event.messageID);
             }
         }
     
@@ -223,7 +225,7 @@ module.exports.getRarityRecursion = (chance, index, number) => {
 }
 
 module.exports.getZombie = (zombieRarity, currentHour, currentMonth) => {
-    const { readFileSync } = require("fs-extra");
+    const { readFileSync } = require ("fs-extra");
     var dataZombie = readFileSync(__dirname + "/cache/zwar/data.json", "utf-8");
     dataZombie = JSON.parse(dataZombie);
     var newZombieData = dataZombie.Zombie.filter(Zombie => Zombie.time.includes(currentHour) && Zombie.months.includes(currentMonth) && Zombie.rarity.includes(zombieRarity));
@@ -231,7 +233,7 @@ module.exports.getZombie = (zombieRarity, currentHour, currentMonth) => {
 }
 
 module.exports.addCritter = (user, critter, api, event) => {
-    if (user.critters[user.critters.length - 1].price != 0 || typeof user.critters[user.critters.length - 1].price == "undefined") api.sendMessage("[Cauca] Túi của bạn không còn đủ không gian lưu trữ!", event.threadID, event.messageID);
+    if (user.critters[user.critters.length - 1].price != 0 || typeof user.critters[user.critters.length - 1].price == "undefined") api.sendMessage("[Zwar] Túi của bạn không còn đủ không gian lưu trữ!", event.threadID, event.messageID);
     else {
         for (i = 0; i < user.critters.length; i++) {
             if (user.critters[i].price === 0) {
@@ -255,25 +257,25 @@ module.exports.run = async function({ api, event, args, client, Currencies, User
         case "register":{
             try {
                 console.log(typeof dataUser);
-                if (Object.entries(dataUser).length != 0) return api.sendMessage("[Hệ Thống Đánh Cá] Bạn đã từng đăng ký vào hội!", event.threadID, event.messageID);
+                if (Object.entries(dataUser).length != 0) return api.sendMessage("[Chiến Trường] Bạn đã từng đăng ký vào chiến trường!", event.threadID, event.messageID);
                 var zwar = {};
                 zwar.weapon = emptyItem;
                 zwar.critters = this.makeEmptyCritterList();
                 await Currencies.setData(event.senderID, {zwar});
-                return api.sendMessage("[Hệ Thống Đánh Cá] Bạn đã đăng ký vào hội thành công", event.threadID, event.messageID);
+                return api.sendMessage("[Chiến Trường] Bạn đã đăng ký vào chiến trường thành công", event.threadID, event.messageID);
             }
             catch (e) {
                 console.log(e);
-                return api.sendMessage("[Hệ Thống Đánh Cá] Hiện tại không thể đăng ký vì đã xảy ra lỗi hệ thống, vui lòng thử lại sau hoặc đợi thông báo!", event.threadID, event.messageID);
+                return api.sendMessage("[Chiến Trường] Hiện tại không thể đăng ký vì đã xảy ra lỗi hệ thống, vui lòng thử lại sau hoặc đợi thông báo!", event.threadID, event.messageID);
             }
         }
         case "shop": {
-            if (Object.entries(dataUser).length == 0)return api.sendMessage("[Hệ Thống Đánh Cá] Bạn cần đăng ký vào hội câu cá, hãy sử dụng '[ /cauca register ]'", event.threadID, event.messageID);
+            if (Object.entries(dataUser).length == 0)return api.sendMessage("[Chiến Trường] Bạn cần đăng ký vào chiến trường, hãy sử dụng '[ /Zwar register ]'", event.threadID, event.messageID);
             return api.sendMessage(
-                "[ ❖ ] [ = [ Shop Câu Cá ] = ] [ ❖ ]" +
+                "[ ❖ ] [ = [ Shop Weapon ] = ] [ ❖ ]" +
                 "\n[ ❖ ] Hãy Nhập Lựa Chọn [ ❖ ]" +
-                "\n[ ❖ ] Mua Cần Câu [ 1 ] [ ❖ ]" +
-                "\n[ ❖ ] Bán Cá [ 2 ] [ ❖ ]" +
+                "\n[ ❖ ] Mua Súng [ 1 ] [ ❖ ]" +
+                "\n[ ❖ ] Bán Zombie [ 2 ] [ ❖ ]" +
                 "\n[ ❖ ] Nâng Cấp Kho [ 3 ] [ ❖ ]" +
                 "\n\n[ ❖ ] => Hãy Trả Lời Tin Nhắn Để Chọn !"
             , event.threadID, (error, info) => {
@@ -286,7 +288,7 @@ module.exports.run = async function({ api, event, args, client, Currencies, User
             }, event.messageID);
         }
         case "inventory": {
-            if (Object.entries(dataUser).length == 0)return api.sendMessage("[Hệ Thống Đánh Cá] Bạn cần đăng ký vào hội câu cá, hãy sử dụng '[ /cauca register ]'", event.threadID, event.messageID);
+            if (Object.entries(dataUser).length == 0)return api.sendMessage("[Chiến Trường] Bạn cần đăng ký vào chiến trường, hãy sử dụng '[ /Zwar register ]'", event.threadID, event.messageID);
             var listCritters = [],
                 msg = "",
                 index = 1;
@@ -317,15 +319,15 @@ module.exports.run = async function({ api, event, args, client, Currencies, User
             if (msg.length == 0) msg = "[!] Hiện tại inventory của bạn chưa có gì [!]";
             const filter = listCritters.filter(items => items.name !== "Empty");
 
-            return api.sendMessage(`[※] [ Kho Đồ ] [※]\n${msg}\n\n[※] [ Thông Tin Cần Câu ] [※]\n\n৹ [ Tên Cần Câu ] : ${dataUser.weapon.name || 'Chưa có'}\n৹ [ Độ Bền Còn Lại ] : ${dataUser.weapon.duribility} lần câu\n৹ [ Tình trạng ] : ${(dataUser.weapon.duribility == 0) ? "Đã bị gãy" : "Hoạt động tốt!"}\n\n[※] [ Inventory Info ] [※]\n\n৹ Slots: ${dataUser.critters.length += 1}\n৹ Tình trạng: ${((dataUser.critters.length - filter.length) == 0) ? "Túi đã đầy" : "Túi vẫn còn chỗ trống"}`, event.threadID, event.messageID);
+            return api.sendMessage(`[※] [ Kho Đồ ] [※]\n${msg}\n\n[※] [ Thông Tin Súng ] [※]\n\n৹ [ Tên Súng ] : ${dataUser.weapon.name || 'Chưa có'}\n৹ [ Số đạn Còn Lại ] : ${dataUser.weapon.duribility} lần câu\n৹ [ Tình trạng ] : ${(dataUser.weapon.duribility == 0) ? "Đã hết đạn" : "Hoạt động tốt!"}\n\n[※] [ Inventory Info ] [※]\n\n৹ Slots: ${dataUser.critters.length += 1}\n৹ Tình trạng: ${((dataUser.critters.length - filter.length) == 0) ? "Túi đã đầy" : "Túi vẫn còn chỗ trống"}`, event.threadID, event.messageID);
         }
         default: {
             try {
                 const format = new Intl.NumberFormat();
-                if (Object.entries(dataUser).length == 0)return api.sendMessage("[Hệ Thống Đánh Cá] Bạn cần đăng ký vào hội câu cá, hãy sử dụng '/cauca register'", event.threadID, event.messageID);
+                if (Object.entries(dataUser).length == 0)return api.sendMessage("[Chiến Trường] Bạn cần đăng ký vào hội câu cá, hãy sử dụng '/Zwar register'", event.threadID, event.messageID);
                 var dates = Math.floor((Math.abs(dataUser.time - new Date()) / 1000) / 60);
-                if (dataUser.weapon.price === 0) return api.sendMessage("[Hệ Thống Đánh Cá] Bạn cần mua cần câu, hãy sử dụng 'cauca shop' để mua mới!", event.threadID, event.messageID);
-                else if (dates < dataUser.weapon.time) return api.sendMessage("[Hệ Thống Đánh Cá] Bạn đang trong thời gian cooldown, hãy thử lại sau!", event.threadID, event.messageID);
+                if (dataUser.weapon.price === 0) return api.sendMessage("[Chiến Trường] Bạn cần mua súng, hãy sử dụng 'Zwar shop' để mua mới!", event.threadID, event.messageID);
+                else if (dates < dataUser.weapon.time) return api.sendMessage("[Chiến Trường] Bạn đang trong thời gian cooldown, hãy thử lại sau!", event.threadID, event.messageID);
                 else if (dataUser.weapon.duribility < 1) {
                     dataUser.weapon = emptyItem;
                     return api.sendMessage("[Hệ Thống Đánh Cá] Cần câu của bạn đã bị gãy, sử dụng '/cauca shop' để mua cần câu mới!", event.threadID, event.messageID);
@@ -360,7 +362,7 @@ module.exports.run = async function({ api, event, args, client, Currencies, User
             }
             catch (e) {
                 console.log(e);
-                return api.sendMessage("[Hệ Thống Đánh Cá] Hiện tại không thể câu cá vì đã xảy ra lỗi hệ thống, vui lòng thử lại sau hoặc đợi thông báo!", event.threadID, event.messageID);
+                return api.sendMessage("[Chiến Trường] Hiện tại không thể tham gia vì đã xảy ra lỗi hệ thống, vui lòng thử lại sau hoặc đợi thông báo!", event.threadID, event.messageID);
             }
         }
     }
