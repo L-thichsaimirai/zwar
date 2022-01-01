@@ -1,7 +1,7 @@
 module.exports.config = {
     name: "Zwar",
     version: "1.0.0",
-    credits: "GinzaTech",
+    credits: "lazic team mod by GinzaTech",
     description: "Tham gia chiến trường zombie trên chính box chat của bạn",
     usages: "Zwar [register/shop/upgrade/info/prison/status/sell]",
     commandCategory: "game",
